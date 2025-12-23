@@ -53,30 +53,37 @@ This repository contains a simple Express.js server that responds to basic HTTP 
 
 ```bash
 npm ci
-
+```
 
 ⸻
 
 ▶️ Running the App Locally
 
+```bash
 npm start
-
+```
 Visit: http://localhost:3000
 
 To override the default port:
 
+```bash
 PORT=8080 npm start
+```
 
 
 ⸻
 
 🧪 Running Tests
 
+```bash
 npm test
+```
 
 CI mode (with coverage)
 
+```bash
 npm run test:ci
+```
 
 
 ⸻

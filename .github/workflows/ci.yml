@@ -49,6 +49,7 @@ jobs:
   docker-build:
     name: Docker Build (CI validation)
     runs-on: ubuntu-latest
+    timeout-minutes: 5
     needs: test
 
     steps:
@@ -56,4 +57,11 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Build Docker image
-        run: docker build -t hello-devops-ci:ci .        
+        run: docker build -t hello-devops-ci:ci .
+      
+      - name: Run container and smoke test
+        run: |
+          docker run -d --rm -p 3000:3000 --name hello-ci hello-devops-ci:ci
+          sleep 1
+          curl -fsS http://localhost:3000/health
+          docker stop hello-ci  

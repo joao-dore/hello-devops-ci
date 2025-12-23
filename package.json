@@ -1,0 +1,25 @@
+{
+  "name": "hello-devops-ci",
+  "version": "1.0.0",
+  "description": "Node.js Hello World with CI/CD on PRs (GitHub Actions)",
+  "type": "module",
+  "main": "src/server.js",
+"scripts": {
+  "start": "node src/server.js",
+  "dev": "node --watch src/server.js",
+  "test": "NODE_ENV=test node --no-warnings --experimental-vm-modules node_modules/jest/bin/jest.js --runInBand",
+  "test:ci": "NODE_ENV=test node --no-warnings --experimental-vm-modules node_modules/jest/bin/jest.js --ci --coverage",
+  "lint": "eslint ."
+},
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "eslint": "^9.39.2",
+    "jest": "^30.2.0",
+    "supertest": "^7.1.4"
+  }
+}

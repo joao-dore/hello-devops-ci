@@ -55,9 +55,9 @@ This repository contains a simple Express.js server that responds to basic HTTP 
 npm ci
 ```
 
-⸻
+---
 
-▶️ Running the App Locally
+## ▶️ Running the App Locally
 
 ```bash
 npm start
@@ -71,9 +71,9 @@ PORT=8080 npm start
 ```
 
 
-⸻
+---
 
-🧪 Running Tests
+## 🧪 Running Tests
 
 ```bash
 npm test
@@ -86,56 +86,58 @@ npm run test:ci
 ```
 
 
-⸻
+---
 
-🔁 CI/CD with GitHub Actions
+## 🔁 CI/CD with GitHub Actions
 
 This pipeline runs on:
-	•	Pull request creation/updates
-	•	Push to main
+- Pull request creation/updates
+- Push to main
 
 Workflow steps:
-	1.	Checkout code
-	2.	Setup Node.js (20.x, 22.x) + npm cache
-	3.	Install dependencies (npm ci)
-	4.	Run ESLint
-	5.	Run tests with coverage
-	6.	Upload coverage artifact
+1. Checkout code
+2. Setup Node.js (20.x, 22.x) + npm cache
+3. Install dependencies (npm ci)
+4. Run ESLint
+5. Run tests with coverage
+6. Upload coverage artifact
 
-This ensures quality gates on every pull request.
+This enforces quality gates on every pull request.
 
-⸻
+---
 
-🛠 Design Decisions
-	•	Express: Simple, widely adopted HTTP framework
-	•	Jest + Supertest: Reliable HTTP testing in CI
-	•	Node matrix testing: Ensures compatibility across Node versions
-	•	Graceful shutdown: Prepares app for containerized environments
+## 🛠 Design Decisions
+- Express: Simple, widely adopted HTTP framework
+- Jest + Supertest: Reliable HTTP testing in CI
+- Node matrix testing: Ensures compatibility across Node versions
+- Graceful shutdown: Prepares app for containerized environments
+- Basic request logging and centralized error handling are included to aid observability and debugging.
 
-⸻
 
-📈 Extending for Production
+---
+
+## 📈 Extending for Production
 
 To take this project to a production readiness level:
-	•	Docker multi-stage build
-	•	Structured logs (e.g., pino)
-	•	Distributed tracing (OpenTelemetry)
-	•	Code scanning (Dependabot, CodeQL)
-	•	Deployment step (ECS/EKS, etc.)
+- Docker multi-stage build
+- Structured logs (e.g., pino)
+- Distributed tracing (OpenTelemetry)
+- Code scanning (Dependabot, CodeQL)
+- Deployment step (ECS/EKS, etc.)
 
-⸻
+---
 
-🧑‍💻 How to Contribute
-	1.	Fork the repo
-	2.	Create a branch: feature/my-feature
-	3.	Open a PR
-	4.	Ensure tests and lint pass
+## 🧑‍💻 How to Contribute
+1. Fork the repo
+2. Create a branch: feature/my-feature
+3. Open a PR
+4. Ensure tests and lint pass
 
-⸻
+---
 
-📄 License
+## 📄 License
 
-This project is provided without specific license.
+This project is intended for technical assessment purposes.
 
 ---
 

@@ -70,7 +70,6 @@ To override the default port:
 PORT=8080 npm start
 ```
 
-
 ---
 
 ## 🧪 Running Tests
@@ -124,6 +123,37 @@ To take this project to a production readiness level:
 - Distributed tracing (OpenTelemetry)
 - Code scanning (Dependabot, CodeQL)
 - Deployment step (ECS/EKS, etc.)
+
+---
+
+## 🐳 Docker
+
+Build:
+```bash
+docker build -t hello-devops-ci:local .
+```
+
+Run:
+```bash
+docker run --rm -p 3000:3000 hello-devops-ci:local
+```
+
+---
+
+## ☸️ Kubernetes (manifests)
+
+Apply:
+```bash
+kubectl apply -f k8s/
+```
+Port-forward:
+```bash
+kubectl port-forward svc/hello-devops-ci 8080:80
+```
+Test:
+```bash
+kubectl port-forward svc/hello-devops-ci 8080:80
+```
 
 ---
 
